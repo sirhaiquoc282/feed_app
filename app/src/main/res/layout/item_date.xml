@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_schedule_item"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="10dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_icon_circle_soft"
+        android:contentDescription="schedule_icon"
+        android:padding="10dp"
+        android:src="@drawable/ic_calendar"
+        app:tint="#334155" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24/04/2025 | 22:38"
+            android:textColor="#181B24"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEatStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_eat_status_pending"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="Chưa cho ăn"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivDeleteSchedule"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_delete_circle"
+        android:contentDescription="delete_schedule"
+        android:padding="10dp"
+        android:src="@drawable/ic_delete_white"
+        app:tint="#DC2626" />
+
+</LinearLayout>

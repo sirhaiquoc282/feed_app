@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_schedule_item"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="14dp">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/bg_icon_circle_soft"
+        android:padding="10dp"
+        android:src="@drawable/ic_an"
+        app:tint="#334155" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvHistoryType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THỦ CÔNG"
+            android:textColor="#181B24"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHistoryDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="24/04/2025 | 22:38:00"
+            android:textColor="#4B5563"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_be">#FFC020</color>
+    <color name="color_productive">#6000F7</color>
+    <color name="color_splash">#D7D7FF</color>
+    <color name="color_text_btn">#6000F7</color>
+    
+    <!-- Color Picker Colors -->
+    <color name="color1">#FFD54F</color>
+    <color name="color2">#FFA726</color>
+    <color name="color3">#EF5350</color>
+    <color name="color4">#EC407A</color>
+    <color name="color5">#AB47BC</color>
+    <color name="color6">#42A5F5</color>
+    <color name="color7">#26C6DA</color>
+    <color name="color8">#66BB6A</color>
+    <color name="color9">#D4E157</color>
+    <color name="color10">#D7CCC8</color>
+    <color name="color_bg_explore">#F9F9F9</color>
+    <color name="color_splash_des">#94A3B8</color>
+</resources>

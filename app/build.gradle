@@ -1,0 +1,81 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.danghung.nhungapp'
+    compileSdk 36
+    buildFeatures{
+        viewBinding true
+    }
+
+    defaultConfig {
+        applicationId "com.danghung.nhungapp"
+        minSdk 28
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+def lifecycle_version = "2.9.2"
+def arch_version = "2.2.0"
+def room_version = "2.8.1"
+dependencies {
+
+    //viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'com.tbuonomo:dotsindicator:5.0'
+
+    // Added/kept: Room dependencies for Home schedule persistence.
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation libs.androidx.core
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // Room coroutine extensions (suspend DAO support)
+    implementation "androidx.room:room-ktx:$room_version"
+
+    // MQTT (EMQX) for ESP32/Arduino communication
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5'
+
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:5.0.5'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+
+    //Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
+
+    // WorkManager fallback for background scheduled feed execution
+    implementation "androidx.work:work-runtime-ktx:2.9.1"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.10.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.10.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.10.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.10.0"
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+}
